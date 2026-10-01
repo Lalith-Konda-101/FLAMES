@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLAMES | Relationship Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="hero">
+        <div class="flame-icon">🔥</div>
+        <p class="eyebrow">THE CLASSIC NAME GAME</p>
+        <h1>FLAMES</h1>
+        <p class="subtitle">Enter two names and let the ancient algorithm decide their totally unscientific fate.</p>
+      </div>
+
+      <form id="flamesForm" novalidate>
+        <div class="fields">
+          <label>
+            <span>Your name</span>
+            <input id="name1" type="text" placeholder="e.g. Senku" autocomplete="off" maxlength="50">
+          </label>
+
+          <div class="vs">VS</div>
+
+          <label>
+            <span>Their name</span>
+            <input id="name2" type="text" placeholder="e.g. Kohaku" autocomplete="off" maxlength="50">
+          </label>
+        </div>
+
+        <p id="error" class="error" aria-live="polite"></p>
+
+        <button class="calculate" type="submit">
+          <span>🔥 Calculate FLAMES</span>
+        </button>
+      </form>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <div class="result-flame" id="resultIcon">🔥</div>
+        <p class="result-label">THE ALGORITHM HAS SPOKEN</p>
+        <h2 id="resultTitle">Friends</h2>
+        <p id="resultDescription"></p>
+        <div class="flames-display" id="flamesDisplay"></div>
+        <p class="disclaimer">For entertainment only. Your friends may still demand a recount.</p>
+        <button id="reset" class="reset" type="button">Try another pair</button>
+      </section>
+    </section>
+
+    <footer>
+      <span>FLAMES Calculator</span>
+      <span>•</span>
+      <span>Purely for fun 😌</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
